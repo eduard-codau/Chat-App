@@ -1,0 +1,32 @@
+.example-form {
+  width: 350px;
+  z-index: 100;
+  color: #fff;
+}
+
+.mat-form {
+  width: 100%;
+}
+
+.search-label {
+  color: #fff;
+}
+
+.profile {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50px;
+  position: relative;
+  top: 10px;
+}
+
+.search-option:hover {
+  background-color: #6b7bd6;
+}
+
+@media screen and (max-width: 600px) {
+  .example-form {
+    width: 200px;
+  }
+}

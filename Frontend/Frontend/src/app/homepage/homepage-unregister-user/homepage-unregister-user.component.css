@@ -1,0 +1,124 @@
+.background {
+    background-image: url("https://tophat.com/wp-content/uploads/BLOG_how-to-motivate-students.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    backdrop-filter: blur(8px);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content {
+    background-color: rgba(247, 247, 247, 0.85);
+    border-radius: 10px;
+    margin: 5px;
+    backdrop-filter: blur(7px);
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+.titlu, .subtitlu {
+    color: #2c38a5;
+    padding-left: 50px;
+    line-height: 1.25;
+    justify-content: center;
+    text-align: center;
+}
+
+.titlu {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: normal;
+    line-height: 1.1;
+    font-weight: 700;
+    padding-top: 80px;
+}
+
+.subtitlu {
+    padding-top: 100px;
+    font-size: 1.375rem;
+    font-weight: 400;
+
+}
+
+/* .try {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #adbff8, #eaeffd);
+    border-style: none;
+    font-weight: 1000;
+    margin-top: 120px;
+    padding: 15px;
+    color: #2c38a5;
+    text-align: center;
+    position: relative;
+    left: 40%;
+}
+
+.try:hover {
+    background-image: linear-gradient(to right, #99b0fa, #d4e0ff);
+} */
+
+button {
+    margin-top: 120px;
+    text-align: center;
+    position: relative;
+    left: 40%;
+
+    border-radius: 20px;
+    border: 1px solid #3927db;
+    background-color: #5580f8;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: #5580f8;
+    border: 1px solid #3927db;
+}
+
+img.img-home {
+    width: 500px;
+    height: auto;
+    padding-top: 80px;
+
+}
+
+.logo {
+    width: 100px;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.line {
+    border: 0.5px solid rgba(194, 194, 194, 0.5);
+}

@@ -1,0 +1,63 @@
+<nav-bar></nav-bar>
+<section class="background">
+    <div class="overlay-background">
+        <div class="content">
+            <div class="container">
+                <div class="column scroll">
+                    <div class="sticky">
+                        <img class="profile" src={{image}} (click)="onSelfProfileClick()">
+                        <h1>Conversații</h1>
+                        <hr class="line">
+                    </div>
+                    <!-- Aici e fortat putin pentru a putea sa se schimbe view-ul pentru chat-ul curent. -->
+                    <friends-for (click)="changeChatView()"></friends-for>
+                </div>
+                <div class="column">
+                    <div class="sticky">
+                        <div *ngIf="chatLength > 0;">
+                            <div (click)="onFriendProfileClick()">
+                                <img class="profile" src={{friendimage}}>
+                                <p>{{friend}}</p>
+                                <span>@{{friendUsername}}</span>
+                            </div>
+                        </div>
+
+                        <hr class="line">
+                    </div>
+                    <div id="test" class="chat-area scroll" #scrollMe  (scroll)="onScroll(scrollMe)">
+                        <ng-container #messageContainer *ngFor="let message of messages">
+                            <div *ngIf="message.fromUser!=userId ; else blue">
+                                <div class="friend" style="text-align: left;">
+                                    <!-- <img src={{image}}> -->
+                                    <span class="message">{{ message.text }}</span>
+                                </div>
+                            </div>
+                            <div>
+                                <ng-template #blue>
+                                    <div class="friend" style="text-align: right;">
+                                        <!-- <img src={{image}}> -->
+                                        <span class="message-me">{{message.text }}</span>
+                                    </div>
+                                </ng-template>
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="message-area">
+                        <input #chat_text id="chat_text" type="text" placeholder="Scrie un mesaj..."
+                            (keyup.enter)="sendMessage(chat_text.value)" />
+                        <input class="send-button" type="button" value="Trimit"
+                            (click)="sendMessage(chat_text.value)" />
+                    </div>
+                </div>
+                
+                <div class="column scroll">
+                    <div class="sticky">
+                        <h1>Sugestii de prieteni</h1>
+                        <hr class="line">
+                    </div>
+                    <contacts></contacts>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

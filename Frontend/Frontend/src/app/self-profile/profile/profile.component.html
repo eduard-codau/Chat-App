@@ -1,0 +1,81 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+<nav-bar></nav-bar>
+<div class="background">
+    <div class="overlay">
+        <div class="profile-box">
+            <img class="profile-image" src="assets/img/poza.jpg" alt="Girl in a jacket" > 
+
+            <h1 class="profile-font">Salutare lume, sunt</h1>
+
+            <h2 class="profile-name">{{ name }}</h2>
+
+            <h1 class="profile-faculty">{{ faculty }}</h1>
+            <h2 class="profile-description">{{ description }}</h2>
+
+            <mat-icon class="profile-calendar-icon">calendar_today</mat-icon>
+            <h1 class="profile-birthdate-h1">{{birthdate}}</h1>
+
+            <mat-icon class="profile-phone-icon">phone</mat-icon>
+            <h1 class="profile-phone-h1">{{phone}}</h1>
+
+            <mat-icon class="profile-mail-icon">mail</mat-icon>
+            <h1 class="profile-mail-h1">{{mail}}</h1>
+
+            <mat-icon class="profile-home-icon">home</mat-icon>
+            <h1 class="profile-address-h1">{{address}}</h1>
+
+        </div>
+    </div>
+</div> -->
+<nav-bar></nav-bar>
+<section class="background">
+    <div class="overlay-background">
+
+        <div class="container" id="container">
+            <div class="img-container">
+                <img [src]="image">
+            </div>
+
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <div class="line-space">
+                            <h1>{{ name }}</h1>
+                            <span>@{{ username }}</span>
+                        </div>
+                        <div class="line-space">
+                            <p class="inline">
+                                <mat-icon class="mat-icon">cake</mat-icon>{{ birthdate }}
+                            </p>&nbsp;&nbsp;
+                            <p class="inline">
+                                <mat-icon class="mat-icon">group</mat-icon>{{ friends }} prieteni
+                            </p>
+                        </div>
+                        <div class="line-space desc">
+                            <p>{{ description }}</p>
+                        </div>
+                        <div class="line-space">
+                            <p style="font-weight:500;">
+                                <mat-icon class="mat-icon">school</mat-icon>{{ faculty }}
+                            </p>
+                            <a href=tel:{{phone}}>
+                                <mat-icon class="mat-icon">phone</mat-icon>{{ phone }}
+                            </a><br>
+                            <a href=mailto:{{email}}>
+                                <mat-icon class="mat-icon">email</mat-icon>{{ email }}
+                            </a>
+                            <p style="font-weight:500;">
+                                <mat-icon class="mat-icon">person</mat-icon>{{ gender }}
+                            </p>
+
+
+                        </div>
+                        <a class="link" href="/edit-profile"><button>Editează profil</button></a><br>
+                        <a class="link" href="/my-profile/chat"><button class="ghost">Conversații</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

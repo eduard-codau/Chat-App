@@ -1,0 +1,10 @@
+<div class="image-upload">
+    <div>
+        <input #file class = "upload-file" type="file" (change)="onFileChanged($event)" />
+        <button class="upload-button" #upload (click)="file.click()">Schimba poza...</button>
+    </div>
+
+    <!-- <div class="col-md-6">
+        <input class="upload-button" type="button" (click)="onUpload()" value="Schimba poza">
+    </div> -->
+</div>

@@ -1,0 +1,27 @@
+<nav-bar></nav-bar>
+<section class="background">
+	<div class="container" id="container">
+		<div class="form-container sign-in-container">
+			<form  #userLogin = "ngForm" (ngSubmit)="login(userLogin.value)">
+				<h1>Login</h1>
+				<span>Intră în contul tău</span>
+				<input type="email" name="email" placeholder="Email" ngModel/>
+				<input type="password" name="password" placeholder="Parolă" ngModel/>
+				<a href="#">Ai uitat parola?</a>
+				<button>Conectare</button>
+			</form>
+		</div>
+		<div class="error">
+			{{ errorMessage }}
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Nu ai un cont creat?</h1>
+					<p>Introdu datele tale personale și începe călătoria cu noi</p>
+					<a href="/register"><button class="ghost" id="signUp">Înregistrează-te</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,64 @@
+a {
+    text-decoration: none;
+}
+
+.friend {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.friend img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 25px;
+    object-fit: cover;
+}
+
+.fr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fr:hover {
+    background-color: #3f51b5;
+    color: #FFFFFF;
+}
+
+.line-light {
+    border: 0.05px solid rgba(194, 194, 194, 0.25);
+}
+
+a:visited, a:link, a:hover {
+    color: #333;
+}
+
+.send-req-button {
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 0.5px solid c;
+    background-color: #5580f8;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 7px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+
+.send-req-button:active {
+    transform: scale(0.95);
+}
+
+.send-req-button:focus {
+    outline: none;
+}

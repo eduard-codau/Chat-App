@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+}
+
+.friend {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.friend img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 25px;
+    object-fit: cover;
+}
+
+.friend span {
+    display: inline-block;
+}
+
+.friend:hover {
+    /* background-color: rgba(128, 128, 128, 0.10); */
+    color:#ffffff;
+    background-color: #3f51b5;
+
+}
+
+.line-light {
+    border: 0.05px solid rgba(194, 194, 194, 0.25);
+}
+
+a:visited, a:link, a:hover {
+    color: #333;
+}

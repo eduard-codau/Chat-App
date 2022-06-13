@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+.background {
+    background-image: url("https://tophat.com/wp-content/uploads/BLOG_how-to-motivate-students.jpg");
+    height: 91.75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay-background {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    margin: 5px;
+    backdrop-filter: blur(7px);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    height: 100%;
+}
+
+.column {
+    height: 100%;
+    border-radius: 10px;
+    height: auto;
+    margin: 5px;
+    border: 1px solid rgb(128, 128, 128, 0.1);
+}
+
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0px;
+}
+
+p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin: 0px;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:visited, a:link, a:hover {
+    color: #333;
+}
+
+form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    font-family: 'Roboto';
+    background-color: rgba(247, 247, 247, 0.75);
+    border: none;
+    padding: 20px 20px;
+    margin: 8px 0;
+    width: 100%;
+    resize: none;
+}
+
+.message-area {
+    width: 49%;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 15px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.line {
+    border: 0.5px solid rgba(194, 194, 194, 0.5);
+}
+
+.line-light {
+    border: 0.05px solid rgba(194, 194, 194, 0.25);
+}
+
+.sticky {
+    background-color: rgba(255, 255, 255, 1);
+    top: 0px;
+    padding-top: 10px;
+    position: sticky;
+    text-align: center;
+}
+
+.send-button {
+    width: 75%;
+    border-radius: 20px;
+    border: 1px solid #3927db;
+    background-color: #5580f8;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.send-button:active {
+    transform: scale(0.95);
+}
+
+.send-button:focus {
+    outline: none;
+}
+
+.send-button.ghost {
+    background-color: #5580f8;
+    border: 1px solid #3927db;
+}
+
+.chat-area {
+    height: 60%;
+    max-height: 400px;
+    overflow-y: scroll;
+    height: 60%;
+    max-height: 400px;
+}
+
+ .message {
+    width: fit-content;
+    max-width: 75%;
+    border-radius: 20px;
+    border: 1px solid #575757;
+    background-color: #b8b8b8;
+    color: #000000;
+    font-size: 12px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 10px;
+} 
+
+.message-me {
+    width: fit-content;
+    max-width: 75%;
+    border-radius: 20px;
+    border: 1px solid #3927db;
+    background-color: #5580f8;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-right: 10px;
+}

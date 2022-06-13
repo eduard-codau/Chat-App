@@ -1,0 +1,22 @@
+<form class="example-form">
+  <mat-form-field class="mat-form" appearance="fill">
+    <mat-label class="search-label">Cauta noi prieteni...</mat-label>
+    <input type="text"
+            placeholder=""
+            aria-label="Number"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto" (input)="onTextChanged($event)" />
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option class="search-option" *ngFor="let option of options" [value]="option"> 
+        <div (click)="onFriendProfileClick(option.userId)">
+          {{option.firstName}}  {{option.lastName}}@{{option.username}}
+          <img class="profile" src={{option.profileImage}}>
+        </div>
+      </mat-option>
+      
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+  

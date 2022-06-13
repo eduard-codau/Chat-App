@@ -1,0 +1,57 @@
+
+<div class="nav">
+    <app-search-bar class="search"></app-search-bar>
+    <mat-toolbar color="primary">
+        <button mat-icon-button [matMenuTriggerFor]="menu" >
+            <div *ngIf="friendReqs.length > 0; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+                <mat-icon matBadge="{{friendReqs.length}}" matBadgePosition="before" matBadgeColor="warn" class="menu-button" >menu</mat-icon>
+            </ng-template>
+            <ng-template #elseBlock>
+                <mat-icon class="menu-button" >menu</mat-icon>
+            </ng-template>
+            
+        </button>
+        <img class="logo" src="../../../assets/img/logo-invert.png">
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button [routerLink]="['/']" mat-menu-item>
+                <mat-icon >home</mat-icon>
+                <span >Acasă</span>
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="cereri">
+                <div *ngIf="friendReqs.length > 0; then thenBlock2 else elseBlock2"></div>
+                <ng-template #thenBlock2>
+                    <mat-icon matBadge="{{friendReqs.length}}"matBadgeColor="warn" >people</mat-icon>
+                </ng-template>
+                <ng-template #elseBlock2>
+                    <mat-icon>people</mat-icon>
+                </ng-template>
+                
+                <span>Cereri de prietenie</span>
+            </button>
+    
+            <button [routerLink]="['/my-profile']" mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Profilul meu</span>
+            </button>
+            <button mat-menu-item (click)="logOut()">
+                <mat-icon>logout</mat-icon>
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+
+        <mat-menu #cereri="matMenu" class="menuFriendReq">
+            <div class="friendReqDiv" mat-menu-item *ngFor="let friend of friendReqs">
+                <img class="profile" src={{friend.profileImage}}>
+
+                <span>{{friend.firstName}} {{friend.lastName}}</span><br>
+                <button class="friendReq" (click)="onAcceptFriendRequest(friend.userId)">Confirmă</button>
+                <button class="friendReq" (click)="onDeleteFriendRequest(friend.userId)">Șterge</button>
+            </div>
+            
+        </mat-menu>
+        <!-- Trebuie adaugate metode prin servicii care sa verifice daca utilizatorul este logat sau nu -->
+        <!-- In functie de rezultatul acestei interogari, se afiseaza butoane diferite -->
+        <!-- se va folosi ngTemplate si ngIf -->
+    </mat-toolbar>
+</div> 

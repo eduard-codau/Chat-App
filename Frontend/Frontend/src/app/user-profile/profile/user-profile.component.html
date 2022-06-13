@@ -1,0 +1,37 @@
+<nav-bar></nav-bar>
+<section class="background">
+    <div class="overlay-background">
+        <div class="container" id="container">
+            <div class="img-container">
+                <img src={{image}}>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <div class="line-space">
+                            <h1>{{ name }}</h1>
+                            <span>@{{ username }}</span>
+                        </div>
+                        <div class="line-space">
+                            <p class="inline"><mat-icon class="mat-icon">cake</mat-icon>{{ birthdate }}</p>&nbsp;&nbsp;
+                            <p class="inline"><mat-icon class="mat-icon">group</mat-icon>{{ friends }} prieteni</p>
+                        </div>
+                        <div class="line-space desc">
+                            <p>{{ description }}</p>
+                        </div>
+                        <div class="line-space">
+                            <p style="font-weight:500;"><mat-icon class="mat-icon">school</mat-icon>{{ faculty }}</p>
+                            <a href=tel:{{phone}}><mat-icon class="mat-icon">phone</mat-icon>{{ phone }}</a><br>
+                            <a href=mailto:{{email}}><mat-icon class="mat-icon">email</mat-icon>{{ email }}</a>
+                            <p style="font-weight:500;"><mat-icon class="mat-icon">person</mat-icon>{{ gender }}</p>
+
+                        </div>
+                        <button>Șterge prieten</button><br>
+                        <!-- <button>Adaugă prieten</button> -->
+                        <button>Contactează</button><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

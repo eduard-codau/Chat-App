@@ -1,0 +1,43 @@
+<nav-bar></nav-bar>
+<section class="background">
+    <div class="container" id="container">
+        <div class="error">
+			{{ errorMessage }}
+		</div>
+        <form  #userRegister = "ngForm" (ngSubmit)="registerUser(userRegister.value)">
+            <h1>Creare cont</h1>
+            <span>Crează-ți un cont nou chiar acum</span>
+            <input type="text" name="firstName" placeholder="Nume" id="logfirstname" autocomplete="off" ngModel>
+            <input type="text" name="lastName" placeholder="Prenume" id="loglastname" autocomplete="off" ngModel>
+            <input type="text" name="username" placeholder="Nume utilizator" id="logusername" autocomplete="off" ngModel>
+            <input type="email" placeholder="Email" name="email" ngModel/>
+            <input type="password" placeholder="Parolă" name="password" ngModel />
+            <input type="text" name="phoneNumber" placeholder="Număr telefon" id="logphone" autocomplete="off" ngModel>
+            <select name="faculty" id="faculty" ngModel>
+                <option value="" selected disabled hidden>Alege facultatea</option>
+                <option value="arh">Arhitectură „G.M. Cantacuzino”</option>
+                <option value="ac">Automatică şi Calculatoare</option>
+                <option value="icp">Inginerie Chimică și Protecția Mediului „Cristofor Simionescu”</option>
+                <option value="ci">Construcţii şi Instalaţii</option>
+                <option value="cmmi">Construcţii de Maşini şi Management Industrial</option>
+                <option value="etti">Electronică, Telecomunicaţii şi Tehnologia Informaţiei</option>
+                <option value="hgi">Hidrotehnică, Geodezie şi Ingineria Mediului</option>
+                <option value="ieea">Inginerie Electrică, Energetică şi Informatică Aplicată</option>
+                <option value="mec">Mecanică</option>
+                <option value="sim">Ştiinţa şi Ingineria Materialelor</option>
+                <option value="dima">Design Industrial și Managementul Afacerilor</option>
+            </select>
+            <select name="gender" id="gender" ngModel>
+                <option value="" selected disabled hidden>Genul</option>
+                <option value="masculin">Masculin</option>
+                <option value="feminin">Feminin</option>
+                <option value="altele">Altele</option>
+            </select>
+            <br>
+            <label>Data nașterii</label>
+            <input type="date" placeholder="yyyy-MM-dd" name="birthday" id="logbday" value="Data" ngModel/>
+            <a href="/login">Ai deja un cont creat? Login</a>
+            <button  type="submit">Înregistrare</button>
+        </form>
+    </div>
+</section>

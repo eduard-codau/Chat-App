@@ -1,0 +1,64 @@
+<nav-bar></nav-bar>
+<section class="background">
+    <div class="overlay-background">
+        <div class="container" id="container">
+            <div class="img-container">
+                <img src={{image}}>
+            </div>
+            <app-image-upload></app-image-upload>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <p class="error">{{errorMessage}}</p>
+                        <form  #userEdit = "ngForm" (ngSubmit)="editProfile()">
+                            <div class="line-space">
+                                <input id="name" class="input-name" type="text" name="name" value="{{name}}" required ><br>
+
+                                <p id="username" style="font-weight:500;">@{{ username }}</p>
+                            </div>
+                            <div class="line-space">
+                                <p class="inline"><mat-icon class="mat-icon">cake</mat-icon>
+                                    <input id="date" type="date" name="birthdate" value="{{ birthdate | date:'yyy-MM-dd' }}">
+                                </p>&nbsp;&nbsp;
+                                <p class="inline"><mat-icon class="mat-icon">group</mat-icon>{{ friends }} prieteni</p>
+                            </div>
+                            <div class="line-space">
+                                <p><textarea id="status" rows="3" class="input-description" type="text" name="description" value="{{ description }}"></textarea></p>
+                            </div>
+                            <div class="line-space">
+                                <p ><mat-icon class="mat-icon">school</mat-icon>
+                                    <select class="faculty-picker" name="faculty" id="faculty" >
+                                        <option value="" selected disabled hidden>Alege facultatea</option>
+                                        <option value="arh">Arhitectură „G.M. Cantacuzino”</option>
+                                        <option value="ac">Automatică şi Calculatoare</option>
+                                        <option value="icp">Inginerie Chimică și Protecția Mediului „Cristofor Simionescu”</option>
+                                        <option value="ci">Construcţii şi Instalaţii</option>
+                                        <option value="cmmi">Construcţii de Maşini şi Management Industrial</option>
+                                        <option value="etti">Electronică, Telecomunicaţii şi Tehnologia Informaţiei</option>
+                                        <option value="hgi">Hidrotehnică, Geodezie şi Ingineria Mediului</option>
+                                        <option value="ieea">Inginerie Electrică, Energetică şi Informatică Aplicată</option>
+                                        <option value="mec">Mecanică</option>
+                                        <option value="sim">Ştiinţa şi Ingineria Materialelor</option>
+                                        <option value="dima">Design Industrial și Managementul Afacerilor</option>
+                                    </select>
+                                </p>
+                                <mat-icon class="mat-icon">phone</mat-icon>
+                                <input id="phone" class="input-details" type="number" name="phone" value="{{ phone }}">
+                                <br>
+                                <p id="email" style="font-weight:500;"><mat-icon class="mat-icon">email</mat-icon>{{ email }}</p>
+
+                                <p id="gender" style="font-weight:500;"><mat-icon class="mat-icon">person</mat-icon>{{ gender }}</p>
+
+                                
+                            </div>
+                            <a class="link" href="/my-profile"><button (click)="cancelEdit()">Anulează</button></a><br>
+                            <a class="link" href="/my-profile"><button class="ghost" type="submit">Salveaza</button></a>
+                            
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
